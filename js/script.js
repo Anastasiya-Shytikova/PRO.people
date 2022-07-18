@@ -14,7 +14,7 @@ function change(json, index) {
     console.log(sneker.image_url)
     console.log(sneker.link)
     let element = document.getElementById("title")
-    element.textContent = sneker.model
+    element.innerHTML = `<p>${sneker.model}</p>`
 
     element = document.getElementById("price")
     element.textContent = json.currency + sneker.price
@@ -29,6 +29,5 @@ function change(json, index) {
         index = 0
     }
     setTimeout(() => { change(json, index) }, 5000)
-
 }
 printJSON()
