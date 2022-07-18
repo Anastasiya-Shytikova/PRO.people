@@ -24,7 +24,6 @@ a {
 }
 
 .banner-title {
-    display: flex;
     font-family: 'Barlow Condensed';
     font-style: italic;
     font-weight: 700;
