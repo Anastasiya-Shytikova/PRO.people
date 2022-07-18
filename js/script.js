@@ -3,20 +3,32 @@ async function printJSON() {
     const json = await response.json();
     console.log(json);
     var index = 0;
-    change(json.sneakers, index)
+    change(json, index)
 }
 
-function change(sneaker, index) {
+function change(json, index) {
 
-    console.log(sneaker[index].model)
-    console.log(sneaker[index].price)
-    console.log(sneaker[index].image_url)
-    console.log(sneaker[index].link)
+    var sneker = json.sneakers[index]
+    console.log(sneker.model)
+    console.log(sneker.price)
+    console.log(sneker.image_url)
+    console.log(sneker.link)
+    let element = document.getElementById("title")
+    element.textContent = sneker.model
+
+    element = document.getElementById("price")
+    element.textContent = json.currency + sneker.price
+
+    element = document.getElementById("image")
+    element.src = sneker.image_url
+
+    element = document.getElementById("box")
+    element.src = sneker.link
     index++
-    if (index >= sneaker.length) {
+    if (index >= json.sneakers.length) {
         index = 0
     }
-    setTimeout(() => { change(sneaker, index) }, 5000)
+    setTimeout(() => { change(json, index) }, 5000)
 
 }
 printJSON()
