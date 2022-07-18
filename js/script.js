@@ -9,10 +9,6 @@ async function printJSON() {
 function change(json, index) {
 
     var sneker = json.sneakers[index]
-    console.log(sneker.model)
-    console.log(sneker.price)
-    console.log(sneker.image_url)
-    console.log(sneker.link)
     let element = document.getElementById("title")
     element.innerHTML = `<p>${sneker.model}</p>`
 
