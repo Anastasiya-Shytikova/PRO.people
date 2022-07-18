@@ -23,7 +23,7 @@ function change(json, index) {
     element.src = sneker.image_url
 
     element = document.getElementById("box")
-    element.src = sneker.link
+    element.href = sneker.link
     index++
     if (index >= json.sneakers.length) {
         index = 0
