@@ -21,5 +21,3 @@ function change(sneaker, index) {
 }
 printJSON()
 
-const createListItem = (model) => `<div>${model}</div>`;
-const createList = (banner - label) => {}
